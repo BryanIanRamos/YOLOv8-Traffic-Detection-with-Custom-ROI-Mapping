@@ -6,7 +6,8 @@ import json
 from datetime import datetime
 
 # Configuration
-video_path = "intersectionRoad1.mp4"
+# video_path = "intersectionRoad1.mp4"
+video_path = "straightroad.mp4"
 output_folder = "roi_mapping_results"
 
 # Extract video filename without extension for folder name
