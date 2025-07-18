@@ -64,11 +64,11 @@ print(f"Video loaded: {frame_width}x{frame_height}, {fps:.2f} FPS, {total_frames
 # POLYGON ROI CONFIGURATION
 # ========================================
 # road1 polygon points
-road1_points = [(286, 89), (469, 116), (500, 51), (339, 33), (285, 89)]
+road1_points = [(285, 91), (471, 117), (549, 17), (374, 4), (284, 92)]
 road1_polygon = np.array(road1_points, np.int32)
 
 # road2 polygon points
-road2_points = [(522, 158), (452, 308), (600, 336), (632, 186), (521, 158)]
+road2_points = [(512, 157), (438, 310), (626, 345), (635, 187), (514, 158)]
 road2_polygon = np.array(road2_points, np.int32)
 
 # Function to check if point is inside polygon
@@ -135,8 +135,9 @@ try:
                 continue
 
         # Draw polygon ROIs
-        cv2.polylines(frame, [road1_polygon], True, (255, 0, 0), 2)
-        cv2.polylines(frame, [road2_polygon], True, (0, 0, 255), 2)
+        cv2.polylines(frame, [road1_polygon], True, (255, 0, 0), 1)
+        cv2.polylines(frame, [road2_polygon], True, (0, 0, 255), 1)
+        cv2.polylines(frame, [road2_polygon], True, (0, 255, 0), 1)
         
         # Add ROI labels
         cv2.putText(frame, "road1", (road1_points[0][0], road1_points[0][1] - 10),

@@ -8,8 +8,11 @@ from datetime import datetime
 # Configuration
 video_path = "intersectionRoad1.mp4"
 output_folder = "roi_mapping_results"
+
+# Extract video filename without extension for folder name
+video_filename = os.path.splitext(os.path.basename(video_path))[0]
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-session_folder = os.path.join(output_folder, f"session_{timestamp}")
+session_folder = os.path.join(output_folder, f"{video_filename}_{timestamp}")
 
 # Create output folders
 if not os.path.exists(output_folder):

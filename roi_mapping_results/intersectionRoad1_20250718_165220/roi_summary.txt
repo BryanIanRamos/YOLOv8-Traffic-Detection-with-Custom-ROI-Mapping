@@ -1,0 +1,19 @@
+ROI POLYGON MAPPING SUMMARY
+========================================
+
+Date/Time: 2025-07-18 16:53:29
+Video File: intersectionRoad1.mp4
+Frame Size: 640x360
+Total Polygons: 2
+
+POLYGON 1: road1
+Points (5): [(285, 91), (471, 117), (549, 17), (374, 4), (284, 92)]
+
+POLYGON 2: road2
+Points (5): [(512, 157), (438, 310), (626, 345), (635, 187), (514, 158)]
+
+INSTRUCTIONS:
+--------------------
+1. Copy the polygon definitions from 'roi_code_for_main.py'
+2. Replace the automatic ROI calculation in your main.py
+3. Use the is_inside_polygon() function to check detections
